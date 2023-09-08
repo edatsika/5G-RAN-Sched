@@ -26,13 +26,13 @@ class scheduler(gym.Env):
         self.RBs = N_RBs[num][band]
         print("RBs used:", self.RBs)
         # Max Ptx
-        Tx_power = self.CalcPtx()  # 4 dBm
-        bandwidth_Hz = band*1000000 # 20 MHz
+        Tx_power = self.CalcPtx()  # dBm
+        bandwidth_Hz = band*1000000 # MHz
         self.bandwidth_RBs_Hz = 0.9*(bandwidth_Hz/self.RBs)
         UEs = self.RBs
         self.Ptx = []
         for i in range(UEs):
-            self.Ptx.append(0)  # Tx_power in dBm, set initially to min = 0 dBm
+            self.Ptx.append(Tx_power)  # Tx_power in dBm, set initially to max
 
         print("Initial Ptx: ", self.Ptx)
 

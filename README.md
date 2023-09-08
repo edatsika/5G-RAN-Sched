@@ -19,7 +19,7 @@ Run inside 5GRANSched folder:
 
 # List of files 
 
-- SchedQL.py runs a simple Q-learning (off-policy) approach that maximizes the RAN energy efficiency by selecting the transmission power per resource block.
+- Sched_QL_SARSA.py allows the user to select between a simple Q-learning (off-policy) approach and the SARSA algorithm that aims to maximize the RAN energy efficiency by selecting the transmission power per resource block.
 - cleanScheduler.bat deletes and re-registers the `scheduler` environment.
 
 # License
